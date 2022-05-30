@@ -46,7 +46,7 @@ const Values = () => {
             <Theme2>Empowering individuals, teams and organisations through diversity</Theme2>
         </Box>
             </BoxHolder>
-            <Button>Tell me Why</Button>
+            <Button>Hire Talent</Button>
         </Wrapper>
     </Container>
   )
@@ -66,7 +66,7 @@ border-radius: 35px;
 outline: none;
 border: none;
 font-weight:bold;
- background-color:#617783 ;
+ background-color:#123456 ;
 text-decoration: none;
 color: white;
 transition: all 350ms;
@@ -88,7 +88,7 @@ border-radius: 35px;
 outline: none;
 border: none;
 font-weight:bold;
- background-color:#617783 ;
+ background-color:#123456 ;
 text-decoration: none;
 color: white;
 transition: all 350ms;
@@ -180,7 +180,7 @@ flex-direction:column ;
 const Line = styled.div`
 height:2px ;
 width:100px ;
-background-color:#617783 ;
+background-color:#123456 ;
 margin-top: 20px;
 transition: all 350ms;
   transform: scale(1);
@@ -191,7 +191,7 @@ transition: all 350ms;
   @media screen and (max-width: 768px){
     height:2px ;
 width:100px ;
-background-color:#617783 ;
+background-color:#123456 ;
 transition: all 350ms;
   transform: scale(1);
   :hover {

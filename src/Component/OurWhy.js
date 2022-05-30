@@ -7,11 +7,11 @@ const OurWhy = () => {
         <Wrapper>
             <BGimage />
             <TextHolder>
-            <Our>Our Why</Our>
+            <Our>Grow, Get Opportunities, Secure your Future</Our>
             <Line/>
-            <Text>Empowering the underrepresented community to fulfil their potential through increasing diversity in technology.
+            <Text>Our project-based learning model connects talents and interns to on-going, practical mentorship which enables them to fast-track skills development, increase project experience, build effective team interaction virtually, and develop soft skills, improve portfolio, and better position them for opportunities.
             </Text>
-            <Button>Show me How</Button>
+            <Button>join accelerator</Button>
             </TextHolder>
 
         </Wrapper>
@@ -22,12 +22,14 @@ const OurWhy = () => {
 export default OurWhy
 
 const Text = styled.div`
-font-size:40px ;
-color: orange;
+font-size:20px ;
+color: white;
 margin-top:20px;
+font-weight:600 ;
+
 @media screen and (max-width: 768px){
-  font-size:20px ;
-color: orange;
+  font-size:15px ;
+color: white;
 margin-top:20px;
 }
 
@@ -47,7 +49,7 @@ border-radius: 35px;
 outline: none;
 border: none;
 font-weight:bold;
- background-color:#4A6572 ;
+ background-color:#123456 ;
 text-decoration: none;
 color: white;
 transition: all 350ms;
@@ -69,7 +71,7 @@ border-radius: 35px;
 outline: none;
 border: none;
 font-weight:bold;
- background-color:#617783 ;
+ background-color:#123456 ;
 text-decoration: none;
 color: white;
 transition: all 350ms;
@@ -84,7 +86,7 @@ transition: all 350ms;
 const Line = styled.div`
 height:2px ;
 width:100px ;
-background-color:#617783 ;
+background-color:#123456 ;
 margin-top: 20px;
 transition: all 350ms;
   transform: scale(1);
@@ -95,7 +97,7 @@ transition: all 350ms;
   @media screen and (max-width: 768px){
     height:2px ;
 width:100px ;
-background-color:#617783 ;
+background-color:#123456 ;
 transition: all 350ms;
   transform: scale(1);
   :hover {
@@ -124,11 +126,13 @@ flex-direction:column;
 
 
 const Our = styled.div`
-font-size:40px ;
-color: orange;
+font-size:30px ;
+color: white;
+font-weight:600 ;
 @media screen and (max-width: 768px){
-  font-size:40px ;
-color: orange;
+  font-size:20px ;
+color: white;
+text-transform:uppercase ;
 }
 
 
@@ -158,7 +162,7 @@ width:100vw ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
-background-image: url("/assets/front.jpg");
+background-image: url("/assets/women.jpg");
 background-repeat:no-repeat ;
 background-size:cover ;
 background-position: top;
@@ -169,7 +173,7 @@ width:100vw ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
-background-image: url("/assets/front.jpg");
+background-image: url("/assets/women.jpg");
 background-repeat:no-repeat ;
 background-size:cover ;
 background-position: top;

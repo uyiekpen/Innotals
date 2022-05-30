@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "img": "/assets/image.jpg",
+        "title": "How to Make Requests in React with Async/Await",
+        "content": "So far, we've seen how to make Axios requests with the promise syntax. Now, let's see how we can use async/await to write less code and avoid the .then chaining, which is much more difficult to understand."
+    },
+    {
+        "id": 2,
+        "img": "/assets/image.jpg",
+        "title": "How to Make Requests in React with Async/Await",
+        "content": "So far, we've seen how to make Axios requests with the promise syntax. Now, let's see how we can use async/await to write less code and avoid the .then chaining, which is much more difficult to understand."
+    },
+    {
+        "id": 3,
+        "img": "/assets/image.jpg",
+        "title": "How to Make Requests in React with Async/Await",
+        "content": "So far, we've seen how to make Axios requests with the promise syntax. Now, let's see how we can use async/await to write less code and avoid the .then chaining, which is much more difficult to understand."
+    }
+]

@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from "styled-components"
+import Slider from './Slider'
 
 const Body = () => {
   return (
 
     <Container>
         <Wrapper>
-            <BGimage/>
+            <BGimage>
+              <Slider/>
+            
+            </BGimage>
             <Content>
-              <Text1>Innovation through diversity</Text1>
+              <Text1>We Accelerate Innovative Talents. Build your Innovation and Engineering Team with Innotals</Text1>
               <Text2>We’re changing the way underrepresented technology talent is found, developed & showcased</Text2>
               <Button>Tell me More</Button>
             </Content>
@@ -66,24 +70,25 @@ transition: all 350ms;
 }
 `
 const Text2 = styled.div`
-margin-top:40px;
+margin-top:20px;
 @media screen and (max-width: 768px){
   margin-top:20px;
   color: orange;
-
-
 }
 `
 
 const Text1 = styled.div`
-font-size: 50px;
+font-size: 20px;
 color: orange;
 font-weight:bold ;
 margin-top:100px ;
 @media screen and (max-width: 768px){
-  font-size: 30px;
+  font-size: 15px;
+  text-transform: uppercase;
   color: orange;
-font-weight:lighter ;
+font-weight:bold ;
+text-align:center ;
+color:white ;
 margin-top:120px ;
 }
 `
@@ -101,10 +106,10 @@ margin-top:100px ;
 width: 100%;
 display:flex;
 flex-direction: column;
+align-items:center;
 justify-content:center ;
 color: white;
 margin-top:-30px ;
-
 }
 `
 
@@ -112,20 +117,15 @@ const HeaderH = styled.div``
 
 
 const BGimage = styled.div`
-background-image: url("/assets/image.jpg");
-height: 100vh;
-width: 100vw;
-position:absolute;
-background-repeat:no-repeat ;
-background-size:cover ;
-background-position: top;
+position:absolute ;
 top: 0;
 right: 0;
 left: 0;
 z-index: -1;
+height: 600px;
+width: 100vw;
 @media screen and (max-width: 768px){
 }
-
 `
 
 const Wrapper = styled.div`

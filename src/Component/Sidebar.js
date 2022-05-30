@@ -14,9 +14,7 @@ const Sidebar = ({Open,onToggle}) => {
     return (
         <Container Open={Open}>
             <SidebarHolder>
-                <IconHolder>
-                    <GiCancel onClick={onToggle}/>
-                </IconHolder>
+              
 
                 <SideBarMenu>
                 <SideBarContent>
@@ -58,6 +56,7 @@ height: 100%;
 background-color: black;
 z-index: 10;
 top: 0;
+font-family:poppins ;
 left:0 ;
 opacity: ${({Open})=>(Open? "0" : "90%" )};
 right: ${({Open})=>(Open? "0" : "100%" )};
@@ -70,7 +69,7 @@ transition: 0.4s ease-in-out ;
 const SidebarHolder = styled.div`
 width: 90%;
 height: 100%;
-margin-top: 20px;
+margin-top: 70px;
 display:flex;
 flex-direction:column;
 
@@ -81,7 +80,7 @@ const IconHolder = styled.div`
 display: flex;
 width: 90%;
 justify-content: flex-end;
-font-size: 30px;
+font-size: 20px;
 color: #fff;
 
 `
@@ -127,4 +126,5 @@ width:150px;
 display:flex;
 align-items:center;
 justify-content:space-between;
+font-family:poppins ;
 `
