@@ -1,20 +1,20 @@
 import React from 'react'
 import styled from "styled-components"
-import Slider from './Slider'
 
 const Body = () => {
   return (
 
     <Container>
         <Wrapper>
-            <BGimage>
-              <Slider/>
-            
-            </BGimage>
+            <BGimage/>
             <Content>
-              <Text1>We Accelerate Innovative Talents. Build your Innovation and Engineering Team with Innotals</Text1>
-              <Text2>We’re changing the way underrepresented technology talent is found, developed & showcased</Text2>
-              <Button>Tell me More</Button>
+              <Text1>We Accelerate Innovative Talents.</Text1>
+              <Text2>Build your Innovation and Engineering Team with Innotals</Text2>
+              <Text3>Innotals is africa’s best talent accelerator providing world-class talents <br/>with exceptional soft skills</Text3>
+             <ButtonHolder>
+              <Button>join Innotals</Button>
+             </ButtonHolder>
+
             </Content>
 
         </Wrapper>
@@ -23,6 +23,21 @@ const Body = () => {
 }
 
 export default Body
+
+const ButtonHolder = styled.div`
+display:flex ;
+width:550px ;
+justify-content:center ;
+text-transform:capitalize ;
+@media screen and (max-width: 768px){
+display:flex ;
+width:100% ;
+justify-content:center ;
+text-transform:capitalize ; 
+}
+
+`
+
 
 const Button = styled.div`
 margin-top: 40px;
@@ -33,11 +48,11 @@ justify-content:center ;
 justify-content:space-evenly ;
 align-items:center ;
 font-family: poppins;
-border-radius: 25px;
+border-radius: 5px;
 outline: none;
 border: none;
 font-weight:bold;
-background-color: black;
+background-color:#2976FC;
 text-decoration: none;
 color: white;
 transition: all 350ms;
@@ -49,17 +64,17 @@ transition: all 350ms;
   @media screen and (max-width: 768px){
     margin-top: 40px;
 height: 60px;
-width: 200px;
+width: 130px;
 display:flex ;
 justify-content:center ;
 justify-content:space-evenly ;
 align-items:center ;
 font-family: poppins;
-border-radius: 35px;
+border-radius: 5px;
 outline: none;
 border: none;
 font-weight:bold;
-background-color: black;
+background-color:#2976FC;
 text-decoration: none;
 color: white;
 transition: all 350ms;
@@ -69,36 +84,50 @@ transition: all 350ms;
     cursor: pointer;
 }
 `
+const Text3 = styled.div`
+text-align:center;
+@media screen and (max-width: 768px){
+  margin-top:20px ;
+
+}
+`
 const Text2 = styled.div`
 margin-top:20px;
+font-size: 30px;
+font-weight:bold ;
+color:white ;
+text-align: center;
 @media screen and (max-width: 768px){
   margin-top:20px;
-  color: orange;
+  color:white ;
+  text-align:center ;
+  font-size: 20px;
+
 }
 `
 
 const Text1 = styled.div`
-font-size: 20px;
-color: orange;
+font-size: 40px;
+color: white;
 font-weight:bold ;
 margin-top:100px ;
+text-align:center ;
 @media screen and (max-width: 768px){
-  font-size: 15px;
-  text-transform: uppercase;
-  color: orange;
+  font-size: 25px;
+  color: white;
 font-weight:bold ;
 text-align:center ;
 color:white ;
-margin-top:120px ;
 }
 `
 
 const Content = styled.div`
 height: 100%;
-width: 50%;
+width: 100%;
 display:flex;
 flex-direction: column;
 justify-content:center ;
+align-items:center ;
 color: white;
 margin-top:100px ;
 @media screen and (max-width: 768px){
@@ -116,7 +145,11 @@ margin-top:-30px ;
 const HeaderH = styled.div``
 
 
-const BGimage = styled.div`
+const BGimage = styled.img`
+background-image: url("/assets/body.jpg");
+background-repeat:no-repeat ;
+background-size:cover ;
+background-position: top;
 position:absolute ;
 top: 0;
 right: 0;
@@ -134,6 +167,11 @@ width: 90%;
 display:flex ;
 align-items:center ;
 @media screen and (max-width: 768px){
+  height: 100%;
+width: 90%;
+display:flex ;
+align-items:center ;
+justify-content:center ;
 }
 `
 
@@ -142,6 +180,7 @@ height: 600px;
 width: 100vw;
 display: flex;
 justify-content:center;
+font-family:poppins ;
 align-items: center;
 @media screen and (max-width: 768px){
 }

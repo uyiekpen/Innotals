@@ -11,7 +11,7 @@ import Values from './Values'
 const Home = () => {
   return (
     <div>
-      <Slider/>
+      <Body/>
       <Values/>
       <OurWhy/>
       <Blog/>

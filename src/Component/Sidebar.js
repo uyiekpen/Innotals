@@ -53,7 +53,7 @@ const Container = styled.div`
 position: fixed;
 width: 80%;
 height: 100%;
-background-color: black;
+background: #121212E5;
 z-index: 10;
 top: 0;
 font-family:poppins ;
