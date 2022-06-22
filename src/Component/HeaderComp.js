@@ -24,7 +24,7 @@ const HeaderComp = () => {
     <Container>
         <Wrapper>
             <LogoHolder>
-                <Logo src="/assets/logo.png"/>
+                <Logo src="/assets/logo2.png"/>
             </LogoHolder>
             <NavMenu>
                 <NavItem>
