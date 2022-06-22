@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from "styled-components"
-import {FiSearch} from "react-icons/fi"
-import {BsCalendar2Date} from "react-icons/bs"
+import {FiSearch,FiSettings} from "react-icons/fi"
+import {BsCalendar2Date,BsBagDash} from "react-icons/bs"
 import {MdNotificationsNone} from "react-icons/md"
-import {AiOutlineDown} from "react-icons/ai"
+import {AiOutlineDown,AiOutlineHome} from "react-icons/ai"
 
 const BoxDesign = () => {
   return (
@@ -45,10 +45,84 @@ const BoxDesign = () => {
             </UpDiv>
             <DownDiv>
               <LeftDiv>
-                hello
+                <Holder>
+                  <HolderContent>
+                    <div><AiOutlineHome/></div>
+                    <div>Home</div>
+                  </HolderContent>
+                  <HolderContent1>
+                    <div><BsBagDash/></div>     <div>interview</div>
+                  </HolderContent1>
+                  <HolderContent2>
+                    <div><FiSettings/></div>
+                    <div>contact</div>
+                  </HolderContent2>
+
+                </Holder>
               </LeftDiv>
               <RightDiv>
-                hello
+                <Title>Schedule interview</Title>
+                <CardHolder>
+                  <CardHolder1>
+                  <Card>
+                    <ImageHolder>
+                      <Image/>
+                    </ImageHolder>
+                    <TextHolder>
+                      <Name>Daniel James</Name>
+                      <Name>Daniel James</Name>
+                      <Name>Daniel James</Name>
+                      <Button>View Bio</Button>
+
+                    </TextHolder>
+                  </Card>
+                  <Card>
+                  <ImageHolder>
+                  <Image/>
+                </ImageHolder>
+                <TextHolder>
+                  <Name>Daniel James</Name>
+                  <Name>Daniel James</Name>
+                  <Name>Daniel James</Name>
+                  <Button>View Bio</Button>
+
+                </TextHolder>
+                  </Card>
+                  </CardHolder1>
+                  <CircleHolder>
+                    <Cirle1/>
+                    <Cirle2/>
+                    <Cirle2/>
+                  </CircleHolder>
+                  <Title>Schedule new interview</Title>
+                  <CardHolder2>
+                  <Card>
+                  <ImageHolder>
+                  <Image/>
+                </ImageHolder>
+                <TextHolder>
+                  <Name>Daniel James</Name>
+                  <Name>Daniel James</Name>
+                  <Name>Daniel James</Name>
+                  <Button>View Bio</Button>
+
+                </TextHolder>
+                  </Card>
+                  <Card>
+                  <ImageHolder>
+                  <Image/>
+                </ImageHolder>
+                <TextHolder>
+                  <Name>Daniel James</Name>
+                  <Name>Daniel James</Name>
+                  <Name>Daniel James</Name>
+                  <Button>View Bio</Button>
+
+                </TextHolder>
+                  </Card>
+                  </CardHolder2>
+
+                </CardHolder>
               </RightDiv>
 
             </DownDiv>
@@ -66,10 +140,150 @@ const BoxDesign = () => {
 }
 
 export default BoxDesign
+const Button = styled.div`
+margin-top:10px;
+height: 30px;
+width: 70px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:10px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+background-color:#2976FC;
+text-decoration: none;
+color: white;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
+`
+const Name = styled.div``
+const TextHolder = styled.div``
+const Image = styled.div``
+
+const ImageHolder = styled.div`
+height: 70px;
+width:100px ;
+background-color:red;
+`
+
+const Cirle2 = styled.div`
+height:10px;
+width:10px ;
+border-radius:100%;
+border:1px solid #2976FC ;
+
+`
+const Cirle1 = styled.div`
+height:10px;
+width:10px ;
+border-radius:100%;
+background-color:#2976FC;
+
+`
+const CircleHolder = styled.div`
+display:flex ;
+justify-content:space-between ;
+margin-top:20px ;
+width:40px ;
+
+`
+
+
+const CardHolder2 = styled.div`
+display:flex ;
+width:100% ;
+justify-content:space-between;
+`
+const Card= styled.div`
+width:275px ;
+height:152.46px ;
+border-radius:14.26px;
+border:1px solid #2976FC ;
+margin-top: 10px;
+display: flex;
+justify-content:center;
+justify-content:space-around;
+align-items:center ;
+
+`
+const CardHolder1 = styled.div`
+display:flex ;
+width:100% ;
+justify-content:space-between;
+`
+
+
+const CardHolder = styled.div`
+display:flex ;
+justify-content:center ;
+align-items:center ;
+flex-direction:column ;
+`
+
+const Title = styled.div`
+margin-top:20px ;
+font-weight:bolder;
+text-align:left ;
+width:100% ;
+
+`
 
 const RightDiv = styled.div`
 flex:5 ;
+padding:20px ;
+
 `
+const HolderContent = styled.div`
+display:flex ;
+height:40px;
+width:60% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+ 
+}
+`
+const HolderContent1 = styled.div`
+display:flex ;
+height:40px;
+width:60% ;
+background-color: #2976FC ;
+justify-content:space-evenly;
+align-items: center;
+border-radius: 12px 0px 0px 12px;
+div{
+  font-weight: bold ;
+  color: #fff;
+}
+`
+const HolderContent2= styled.div`
+display:flex ;
+height:40px;
+width:60% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+}
+`
+const Holder = styled.div`
+display:flex ;
+flex-direction:column ;
+align-items:flex-end ;
+width:100% ;
+height:100% ;
+margin-top:40px;
+`
+
 const LeftDiv = styled.div`
 flex: 1.5;
 border-right: 1px solid #2976FC;
@@ -77,7 +291,7 @@ border-right: 1px solid #2976FC;
 const DownDiv = styled.div`
 width:100% ;
 display:flex ;
-height:438px ;
+height:489px ;
 
 `
 
@@ -188,7 +402,7 @@ background-color:white ;
 `
 const FirstBox = styled.div``
 const FirstBoxHolder = styled.div`
-height:500px ;
+height:550px ;
 width:60vw ;
 border-radius:57.0px ;
 margin-top: -30px;
@@ -197,7 +411,7 @@ background-color:white ;
 `
 const Wrapper = styled.div`
 width: 90vw;
-height:600px ;
+height:700px ;
 display:flex ;
 justify-content:center ;
 justify-content:space-between ;
@@ -205,8 +419,9 @@ justify-content:space-between ;
 
 const Components = styled.div`
 width: 100vw;
-height:600px ;
+height:700px ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
+font-family:poppins ;
 `
