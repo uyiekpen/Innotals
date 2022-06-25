@@ -98,7 +98,7 @@ transition: all 350ms;
 
 const NavBar = styled.div`
 display:none ;
-@media screen and (max-width: 760px){
+@media screen and (max-width: 768px){
     display:  block;
     font-size: 40px;
     
@@ -116,7 +116,7 @@ display:none ;
 `
 
 const NavLogoItem = styled.div`
-@media screen and (max-width: 760px){
+@media screen and (max-width: 768px){
     display:  none;
 }
 @media screen and (max-width: 768px){
@@ -199,7 +199,7 @@ width:40% ;
 display:flex;
 align-items:center;
 justify-content:space-between;
-@media screen and (max-width: 760px){
+@media screen and (max-width: 768px){
     display:  none;
     
 }

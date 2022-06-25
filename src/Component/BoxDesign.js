@@ -1,12 +1,13 @@
 import React from 'react'
-import styled from "styled-components"
+import styled,{keyframes} from "styled-components"
 import {FiSearch,FiSettings} from "react-icons/fi"
 import {BsCalendar2Date,BsBagDash} from "react-icons/bs"
 import {MdNotificationsNone} from "react-icons/md"
 import {AiOutlineDown,AiOutlineHome} from "react-icons/ai"
-
+import { bounce } from 'react-animations'
 const BoxDesign = () => {
   return (
+    <Bounce>
     <Components>
       <Wrapper>
         <FirstBoxHolder>
@@ -153,7 +154,7 @@ const BoxDesign = () => {
         </FirstBoxHolder>
         <SecondBoxHolder>
           <SecondBox>
-            <Image2 src="/assets/guy.jpg"/>
+            <Image3 src="/assets/guy.jpg"/>
             <Tezt>Edet James</Tezt>
             <Text>Senior Product designer</Text>
             <Text>10 years Experience</Text>
@@ -170,10 +171,15 @@ const BoxDesign = () => {
         </SecondBoxHolder>
       </Wrapper>
     </Components>
+    </Bounce>
   )
 }
 
 export default BoxDesign
+
+const Bounce = styled.div`
+animation: 2s ${keyframes `${bounce}`}  ;
+`
 
 const Text1 = styled.div`
 text-align:center ;
@@ -184,6 +190,9 @@ font-weight:bold ;
 @media screen and (max-width: 768px){
 }
 @media screen and (max-width: 425px){
+  text-align:center ;
+font-size:8px ;
+font-weight:bold ;
 }
 @media screen and (max-width: 320px){
 }
@@ -240,8 +249,52 @@ transition: all 350ms;
   }
 }
 @media screen and (max-width: 425px){
+  margin-top:10px;
+height: 30px;
+width: 80px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:10px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+background-color:#073FA0;
+text-decoration: none;
+color: white;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 320px){
+  margin-top:10px;
+height: 30px;
+width: 70px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:10px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+background-color:#073FA0;
+text-decoration: none;
+color: white;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 `
 const Button4 = styled.div`
@@ -290,6 +343,26 @@ transition: all 350ms;
   }
 }
 @media screen and (max-width: 425px){
+  height: 20px;
+width: 40px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:5px ;
+outline: none;
+border: 1px solid;
+font-weight:bold;
+border-radius: 5px;
+text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 320px){
 }
@@ -305,10 +378,35 @@ font-weight:bolder ;
 text-transform:uppercase ;
 font-size:15px ;
 margin-bottom: 20px;
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 425px){
+  font-weight:bolder ;
+text-transform:uppercase ;
+font-size:8px ;
+margin-bottom: 20px;
+ 
+}
+@media screen and (max-width: 320px){
+}
+
 `
 
 const Tezt2 = styled.div`
 font-weight:bolder ;
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 425px){
+  font-weight:bolder ;
+  font-size:10px ;
+ 
+}
+@media screen and (max-width: 320px){
+}
 `
 const Text = styled.div`
 font-weight:bold ;
@@ -318,6 +416,8 @@ font-size:10px ;
 @media screen and (max-width: 768px){
 }
 @media screen and (max-width: 425px){
+  font-weight:bold ;
+font-size:8px ;
 }
 @media screen and (max-width: 320px){
 }
@@ -355,8 +455,34 @@ align-items:center ;
 flex-direction:column;
 }
 @media screen and (max-width: 425px){
+  position:absolute ;
+height:200px ;
+width:120px ;
+bottom: -100px;
+box-shadow: 0px 12px #073FA0;
+border:1px solid #073FA0 ;
+background-color:white ;
+left: -70px;
+border-radius: 28.515625px;
+display:flex ;
+justify-content:center ;
+align-items:center ;
+flex-direction:column;
 }
 @media screen and (max-width: 320px){
+  position:absolute ;
+height:200px ;
+width:90px ;
+bottom: -115px;
+box-shadow: 0px 12px #073FA0;
+border:1px solid #073FA0 ;
+background-color:white ;
+left: -40px;
+border-radius: 28.515625px;
+display:flex ;
+justify-content:center ;
+align-items:center ;
+flex-direction:column;
 }
 `
 const New = styled.div`
@@ -388,8 +514,26 @@ justify-content:space-around;
 align-items:center ;
 }
 @media screen and (max-width: 425px){
+  width:120px ;
+height:152.46px ;
+border-radius:14.26px;
+border:1px solid #073FA0 ;
+margin-top: 10px;
+display: flex;
+justify-content:center;
+justify-content:space-around;
+align-items:center ;
 }
 @media screen and (max-width: 320px){
+  width:100px ;
+height:152.46px ;
+border-radius:14.26px;
+border:1px solid #073FA0 ;
+margin-top: 10px;
+display: flex;
+justify-content:center;
+justify-content:space-around;
+align-items:center ;
 }
 
 `
@@ -441,8 +585,51 @@ transition: all 350ms;
   }
 }
 @media screen and (max-width: 425px){
+  margin-top:10px;
+height: 30px;
+width: 50px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:10px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 320px){
+  margin-top:10px;
+height: 30px;
+width: 40px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:5px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
+}
 }
 `
 const Button2 = styled.div`
@@ -495,8 +682,53 @@ transition: all 350ms;
   }
 }
 @media screen and (max-width: 425px){
+  margin-top:10px;
+height: 30px;
+width: 50px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+font-size:10px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 320px){
+  margin-top:10px;
+height: 30px;
+width: 40px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+font-size:7px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
+}
 }
 `
 const Button = styled.div`
@@ -549,8 +781,52 @@ transition: all 350ms;
   }
 }
 @media screen and (max-width: 425px){
+  margin-top:10px;
+height: 30px;
+width: 50px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:10px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+background-color:#073FA0;
+text-decoration: none;
+color: white;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 320px){
+  margin-top:10px;
+height: 20px;
+width: 40px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:5px ;
+outline: none;
+border: none;
+font-weight:bold;
+border-radius: 5px;
+background-color:#073FA0;
+text-decoration: none;
+color: white;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 `
 const Name1 = styled.div`
@@ -561,8 +837,13 @@ font-size:12px ;
 @media screen and (max-width: 768px){
 }
 @media screen and (max-width: 425px){
+  font-weight:bold ;
+font-size:8px ;
 }
 @media screen and (max-width: 320px){
+  font-weight:bolder;
+font-size:5px ;
+
 }
 `
 const Name3 = styled.div`
@@ -613,14 +894,68 @@ transition: all 350ms;
   }
 }
 @media screen and (max-width: 425px){
+  height: 30px;
+width: 40px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:8px ;
+background-color: white;
+color: #000;
+outline: none;
+border: none;
+font-weight:bold;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
+
 }
 @media screen and (max-width: 320px){
+  height: 30px;
+width: 30px;
+display:flex ;
+justify-content:center ;
+justify-content:space-evenly ;
+align-items:center ;
+font-family: poppins;
+font-size:5px ;
+background-color: white;
+color: #000;
+outline: none;
+border: none;
+font-weight:bold;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;text-decoration: none;
+color: black;
+transition: all 350ms;
+  transform: scale(1);
+  :hover {
+    transform: scale(0.97);
+    cursor: pointer;
+  }
 }
 `
 
 
 const Name = styled.div`
 font-size:12px ;
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 425px){
+  font-size:8px ;
+}
+@media screen and (max-width: 320px){
+  font-size:5px ;
+
+}
 
 `
 const TextHolder = styled.div``
@@ -638,6 +973,36 @@ object-fit:cover ;
 border-radius: 10px;
 }
 @media screen and (max-width: 425px){
+  height: 70px;
+width:50px ;
+object-fit:cover ;
+border-radius: 10px;
+}
+@media screen and (max-width: 320px){
+  height: 50px;
+width:30px ;
+object-fit:cover ;
+margin-left: 10px;
+}
+`
+const Image3 = styled.img`
+height: 100px;
+width:100px ;
+border-radius: 100%;
+object-fit:cover ;
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+  height: 80px;
+width:80px ;
+border-radius: 100%;
+object-fit:cover ;
+}
+@media screen and (max-width: 425px){
+  height: 70px;
+width:70px ;
+border-radius: 100%;
+object-fit:cover ;
 }
 @media screen and (max-width: 320px){
 }
@@ -656,8 +1021,16 @@ border-radius: 100%;
 object-fit:cover ;
 }
 @media screen and (max-width: 425px){
+  height: 70px;
+width:70px ;
+border-radius: 100%;
+object-fit:cover ;
 }
 @media screen and (max-width: 320px){
+  height: 50px;
+width:50px ;
+border-radius: 100%;
+object-fit:cover ;
 }
 `
 
@@ -749,7 +1122,7 @@ justify-content:space-around;
 align-items:center ;
 }
 @media screen and (max-width: 425px){
-  width:220px ;
+  width:120px ;
 height:152.46px ;
 border-radius:14.26px;
 border:1px solid #073FA0 ;
@@ -760,6 +1133,15 @@ justify-content:space-around;
 align-items:center ;
 }
 @media screen and (max-width: 320px){
+  width:90px ;
+height:152.46px ;
+border-radius:14.26px;
+border:1px solid #073FA0 ;
+margin-top: 10px;
+display: flex;
+justify-content:center;
+justify-content:space-between;
+align-items:center ;
 }
 
 `
@@ -803,8 +1185,14 @@ width:100% ;
 @media screen and (max-width: 1024px){
 }
 @media screen and (max-width: 768px){
+font-weight:bolder;
+text-align:left ;
+width:100% ;
 }
 @media screen and (max-width: 425px){
+  font-weight:bolder;
+text-align:left ;
+width:100% ;
 }
 @media screen and (max-width: 320px){
 }
@@ -821,8 +1209,12 @@ padding:20px ;
 padding:20px ;
 }
 @media screen and (max-width: 425px){
+  flex:5 ;
+padding:20px ;
 }
 @media screen and (max-width: 320px){
+  flex:5 ;
+
 }
 
 `
@@ -839,10 +1231,41 @@ div{
 @media screen and (max-width: 1024px){
 }
 @media screen and (max-width: 768px){
+  display:flex ;
+height:40px;
+width:80% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  font-size: 10px;
+ 
+}
 }
 @media screen and (max-width: 425px){
+  display:flex ;
+height:40px;
+width:90% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  font-size:10px ;
+ 
+}
 }
 @media screen and (max-width: 320px){
+  display:flex ;
+height:40px;
+width:90% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  font-size:7px ;
+ 
+}
+
 }
 `
 const HolderContent1 = styled.div`
@@ -858,12 +1281,45 @@ div{
   color: #fff;
 }
 @media screen and (max-width: 1024px){
-}
+ 
 @media screen and (max-width: 768px){
+  display:flex ;
+height:40px;
+width:80% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  color: #fff;
+  font-size:10px;
+}
+}
 }
 @media screen and (max-width: 425px){
+  display:flex ;
+height:40px;
+width:90% ;
+background-color: #073FA0 ;
+justify-content:space-evenly;
+align-items: center;
+border-radius: 12px 0px 0px 12px;
+div{
+  font-weight: bold ;
+  color: #fff;
+  font-size:10px ;
 }
 @media screen and (max-width: 320px){
+  display:flex ;
+height:40px;
+width:90% ;
+background-color: #073FA0 ;
+justify-content:space-evenly;
+align-items: center;
+border-radius: 12px 0px 0px 12px;
+div{
+  font-weight: bold ;
+  color: #fff;
+  font-size:7px ;
 }
 `
 const HolderContent2= styled.div`
@@ -878,10 +1334,39 @@ div{
 @media screen and (max-width: 1024px){
 }
 @media screen and (max-width: 768px){
+  display:flex ;
+height:40px;
+width:80% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  font-size:10px;
+}
+
 }
 @media screen and (max-width: 425px){
+  display:flex ;
+height:40px;
+width:90% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  font-size:10px ;
+}
 }
 @media screen and (max-width: 320px){
+  display:flex ;
+height:40px;
+width:90% ;
+justify-content:space-evenly;
+align-items: center;
+div{
+  font-weight: bold ;
+  font-size:7px ;
+}
+
 }
 `
 const Holder = styled.div`
@@ -911,6 +1396,8 @@ border-right: 1px solid #073FA0;
 border-right: 1px solid #073FA0;
 }
 @media screen and (max-width: 425px){
+  flex: 2;
+border-right: 1px solid #073FA0;
 }
 @media screen and (max-width: 320px){
 }
@@ -954,6 +1441,10 @@ border-radius:100% ;
 @media screen and (max-width: 425px){
 }
 @media screen and (max-width: 320px){
+  height:30px ;
+width:30px ;
+object-fit:contain ;
+border-radius:100% ;
 }
 `
 
@@ -975,6 +1466,13 @@ align-items:center ;
 @media screen and (max-width: 425px){
 }
 @media screen and (max-width: 320px){
+  height:30px ;
+width:30px ;
+border-radius:100% ;
+background-color:whitesmoke ;
+display:flex ;
+justify-content:center ;
+align-items:center ;
 }
 `
 
@@ -990,8 +1488,20 @@ justify-content:space-between ;
 @media screen and (max-width: 768px){
 }
 @media screen and (max-width: 425px){
+  display:flex ;
+height:60px ;
+width:140px ;
+justify-content:center ;
+align-items:center ;
+justify-content:space-between ;
 }
 @media screen and (max-width: 320px){
+  display:flex ;
+height:60px ;
+width:120px ;
+justify-content:center ;
+align-items:center ;
+justify-content:space-between ;
 }
 `
 
@@ -1007,6 +1517,8 @@ margin-left:40px;
 @media screen and (max-width: 425px){
 }
 @media screen and (max-width: 320px){
+  position:absolute ;
+margin-left:20px;
 }
 
 `
@@ -1032,8 +1544,39 @@ padding:10px ;
 @media screen and (max-width: 768px){
 }
 @media screen and (max-width: 425px){
+  height: 40px;
+width:100px ;
+background-color:whitesmoke ;
+border:none ;
+outline:none ;
+border-radius:15px ;
+display:flex ;
+justify-content:center ;
+align-items:center ;
+position:relative ;
+
+::placeholder{
+font-family:poppins ;
+padding:10px ;
+font-size: 8px;
+}
 }
 @media screen and (max-width: 320px){
+  height: 40px;
+width:80px ;
+background-color:whitesmoke ;
+border:none ;
+outline:none ;
+border-radius:15px ;
+display:flex ;
+justify-content:center ;
+align-items:center ;
+position:relative ;
+
+::placeholder{
+font-family:poppins ;
+padding:10px ;
+}
 }
 `
 const SearchDiv = styled.div`
@@ -1046,8 +1589,15 @@ width:150px ;
 @media screen and (max-width: 768px){
 }
 @media screen and (max-width: 425px){
+  ustify-content:space-around ;
+align-items:center ;
+width:100px ;
 }
 @media screen and (max-width: 320px){
+  display:flex ;
+justify-content:space-around ;
+align-items:center ;
+width:80px ;
 }
 
 
@@ -1062,6 +1612,20 @@ const Logo = styled.img`
 height: 30px;
 width:40px ;
 object-fit:contain ;
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 425px){
+  height: 30px;
+width:30px ;
+}
+
+
+@media screen and (max-width: 320px){
+  height: 30px;
+width:30px ;
+}
 `
 const LogoHolder = styled.div``
 
@@ -1159,19 +1723,36 @@ box-shadow: 0px 12px #073FA0;
 border:1px solid #073FA0 ;
 background-color:white ;
 @media screen and (max-width: 1024px){
+  height:400px ;
+width:40vw ;
+border-radius:47.55px ;
+box-shadow: 0px 12px #073FA0;
+border:1px solid #073FA0 ;
 }
 @media screen and (max-width: 768px){
   height:400px ;
 width:400px ;
 border-radius:47.55px ;
-margin-top: -30px;
+box-shadow: 0px 12px #073FA0;
+border:1px solid #073FA0 ;
+margin-top:120px ;
+
+}
+@media screen and (max-width: 425px){
+  height:300px ;
+width:300px ;
+border-radius:47.55px ;
 box-shadow: 0px 12px #073FA0;
 border:1px solid #073FA0 ;
 background-color:white ;
 }
-@media screen and (max-width: 425px){
-}
 @media screen and (max-width: 320px){
+  height:300px ;
+width:280px ;
+border-radius:47.55px ;
+box-shadow: 0px 12px #073FA0;
+border:1px solid #073FA0 ;
+background-color:white ;
 }
 `
 const FirstBox = styled.div``
@@ -1186,7 +1767,7 @@ background-color:white ;
   height:550px ;
 width:75vw ;
 border-radius:57.0px ;
-margin-top: -30px;
+margin-top: -120px;
 border:1px solid #073FA0 ;
 background-color:white ;
 }
@@ -1194,7 +1775,7 @@ background-color:white ;
   height:550px ;
   width:85% ;
 border-radius:57.0px ;
-margin-top: -30px;
+margin-top:-60px;
 border:1px solid #073FA0 ;
 background-color:white ;
 }
@@ -1202,11 +1783,10 @@ background-color:white ;
   height:550px ;
 width:100% ;
 border-radius:57.0px ;
-margin-top: -30px;
 border:1px solid #073FA0 ;
 background-color:white ;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 320px){
   height:550px ;
 width:100% ;
 border-radius:57.0px ;
@@ -1223,26 +1803,25 @@ justify-content:center ;
 justify-content:space-between ;
 @media screen and (max-width: 1024px){
 width: 90vw;
-height:1200px ;
+height:1000px ;
 display:flex ;
 justify-content:center ;
 justify-content:space-between ;
 align-items:center ;
 flex-direction:column;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
 width: 90vw;
 height:1200px ;
 display:flex ;
 justify-content:center ;
-justify-content:space-between ;
 flex-direction:column;
 align-items:center ;
 
 }
 @media screen and (max-width: 425px){
 width: 90vw;
-height:1200px ;
+height:900px ;
 display:flex ;
 justify-content:center ;
 justify-content:space-between ;
@@ -1250,9 +1829,9 @@ flex-direction:column;
 align-items:center ;
 
 }
-@media screen and (max-width: 768px){
-width: 90vw;
-height:1200px ;
+@media screen and (max-width: 320px){
+  width: 90vw;
+height:900px ;
 display:flex ;
 justify-content:center ;
 justify-content:space-between ;
@@ -1279,7 +1858,7 @@ font-family:poppins ;
 }
 @media screen and (max-width:  768px){
 width: 100vw;
-height:1200px ;
+height:1000px ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
@@ -1287,15 +1866,15 @@ font-family:poppins ;
 }
 @media screen and (max-width:  425px){
 width: 100vw;
-height:1400px ;
+height:900px ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
 font-family:poppins ;
 }
 @media screen and (max-width:  320px){
-width: 100vw;
-height:1200px ;
+  width: 100vw;
+height:900px ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
